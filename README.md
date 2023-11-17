@@ -1,2 +1,4 @@
 # E-commerce-Website
-QA Testing
+
+TechShopBD automation suite with BDD approach.
+Integrated with Playwright, Cucumber and Typescript.

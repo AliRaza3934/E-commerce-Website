@@ -1,0 +1,21 @@
+{
+  "name": "e-commerce-website",
+  "version": "1.0.0",
+  "description": "QA Testing",
+  "main": "index.js",
+  "scripts": {
+    "techshop": "cucumber-js test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.0.1",
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.9.0"
+  },
+  "dependencies": {
+    "g": "^2.0.1",
+    "ts-node": "^10.9.1"
+  }
+}
