@@ -18,6 +18,11 @@ export class ProductSearch {
         console.log(...await this.landingPageLocators.resultProducts().allTextContents());
     }
 
+    public async goToCategory(getCategory):Promise<void>{
+        const categorySelect = await pageFixture.page.locator("//ul//li[@class='category-item js--category-item']//a[contains(., '"+getCategory+"')]");
+        await categorySelect.click();
+    }
+
     constructor(public page: Page){
         pageFixture.page = page;
     }

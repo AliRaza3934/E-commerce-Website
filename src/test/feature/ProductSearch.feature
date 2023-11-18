@@ -8,6 +8,14 @@ Feature: User is able to search and filter products.
   When User enters "<PRODUCT>"
   Then "<PRODUCT>" is returned
 
-Examples:
+  Examples:
     | PRODUCT             |
     | LCD Display 16X2 with Header|
+
+  Scenario: User is able to sort products low to high
+  When User enters "<CATEGORY>"
+  Then User selects low to high sorting
+
+  Examples:
+    | CATEGORY |
+    | KITS     |

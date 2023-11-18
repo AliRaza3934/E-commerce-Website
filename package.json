@@ -4,7 +4,7 @@
   "description": "QA Testing",
   "main": "index.js",
   "scripts": {
-    "techshop": "cucumber-js test"
+    "techshop": "cucumber-js test --format cucumber-console-formatter --tags=@Regression"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,7 @@
     "@types/node": "^20.9.0"
   },
   "dependencies": {
+    "cucumber-console-formatter": "^1.0.0",
     "g": "^2.0.1",
     "ts-node": "^10.9.1"
   }
