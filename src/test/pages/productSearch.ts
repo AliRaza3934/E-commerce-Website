@@ -15,7 +15,7 @@ export class ProductSearch {
 
     public async assertProduct(searchResult):Promise<void>{
         await expect(this.landingPageLocators.resultProducts()).toContainText(searchResult);
-        console.log(...await this.landingPageLocators.resultProducts().allTextContents());
+        //console.log(...await this.landingPageLocators.resultProducts().allTextContents());
     }
 
     public async goToCategory(getCategory):Promise<void>{

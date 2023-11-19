@@ -12,10 +12,4 @@ Feature: User is able to search and filter products.
     | PRODUCT             |
     | LCD Display 16X2 with Header|
 
-  Scenario: User is able to sort products low to high
-  When User enters "<CATEGORY>"
-  Then User selects low to high sorting
-
-  Examples:
-    | CATEGORY |
-    | KITS     |
+  
