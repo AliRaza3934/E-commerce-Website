@@ -1,9 +1,9 @@
-@Product
+@pD
 Feature: User is able to search and filter products.
 
- Background: User visits website
+  Background: User visits website
   Given User visits the website
-  
+ 
  Scenario: User is able to search products
   When User enters "<PRODUCT>"
   Then "<PRODUCT>" is returned
@@ -12,10 +12,8 @@ Feature: User is able to search and filter products.
     | PRODUCT             |
     | LCD Display 16X2 with Header|
 
-  Scenario: User is able to sort products low to high
-  When User enters "<CATEGORY>"
-  Then User selects low to high sorting
 
-  Examples:
-    | CATEGORY |
-    | KITS     |
+ Scenario: User is able to apply filters
+ Then User is able to select  a categorys
+ 
+  

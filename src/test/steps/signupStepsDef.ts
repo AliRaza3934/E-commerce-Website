@@ -7,5 +7,5 @@ setDefaultTimeout(15000);
 
 When('User clicks login option and clicks signup tab', async function(){
     let loginUp = new SignupPage(pageFixture.page);
-    await loginUp.goToSignupPage();
+    loginUp.goToSignupPage();
 });
