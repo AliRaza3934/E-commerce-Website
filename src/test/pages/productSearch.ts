@@ -19,7 +19,7 @@ export class ProductSearch {
     }
 
     public async goToCategory(getCategory):Promise<void>{
-        const categorySelect = await pageFixture.page.locator("//ul//li[@class='category-item js--category-item']//a[contains(., '"+getCategory+"')]");
+        const categorySelect = pageFixture.page.locator("//ul//li[@class='category-item js--category-item']//a[contains(., '"+getCategory+"')]");
         await categorySelect.click();
     }
 

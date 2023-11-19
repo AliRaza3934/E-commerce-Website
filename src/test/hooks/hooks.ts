@@ -9,7 +9,6 @@ let context: BrowserContext;
 
 BeforeAll(async function(){
    browser = await chromium.launch(config);
-    
 });
 
 Before(async function(){
@@ -28,5 +27,5 @@ After(async function({pickle, result}){
 });
 
 AfterAll(async function(){
-    await browser.close();
+    //await browser.close();
 });
