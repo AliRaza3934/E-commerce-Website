@@ -13,9 +13,7 @@ export class UserProfile{
         cityField:()=> pageFixture.page.locator("//input[@id='city']"),
         PostcodeField:()=> pageFixture.page.locator("//input[@id='postCode']"),
         saveBtn:()=>pageFixture.page.locator("//input[@id='addressInfo']"),
-        
-
-    }
+ }
 
 
 public async navigateToEditProfile():Promise<void>{

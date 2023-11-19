@@ -13,11 +13,12 @@ export class CartItem{
         await pageFixture.page.goto('https://techshopbd.com/browse/category?id=30');
 
     }
-
     public async selectProduct():Promise<void>{
-      await this.cartitemLocators.accessoriesField().click();
-      //await this.cartitemLocators.addItem().click();
-      //await this.cartitemLocators.cartbtn().click()
+        await this.cartitemLocators.accessoriesField().click();
+        await pageFixture.page.waitForSelector('#js--btn-plus');
+        await pageFixture.page.waitForTimeout(5000);
+        await pageFixture.page.locator('#js--btn-plus').dblclick();
+        await this.cartitemLocators.cartbtn().click()
     }
     constructor(public page: Page){
         pageFixture.page = page;
