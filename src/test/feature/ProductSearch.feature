@@ -1,12 +1,13 @@
-@pD
+@productSearch
 Feature: User is able to search and filter products.
 
   Background: User visits website
   Given User visits the website
  
  Scenario: User is able to search products
-  When User enters "<PRODUCT>"
+  When User is enters "<PRODUCT>"
   Then "<PRODUCT>" is returned
+  
 
   Examples:
     | PRODUCT             |

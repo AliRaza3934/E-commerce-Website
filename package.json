@@ -4,12 +4,10 @@
   "description": "QA Testing",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-    "techshop": "cucumber-js test --format cucumber-console-formatter --tags=@pD"
-=======
-    "techshop": "cucumber-js test --format cucumber-console-formatter --tags=@Product"
->>>>>>> 109699a453277dcbfbf7b42321ecf13d01399c42
+    "techshop": "cucumber-js test --format cucumber-console-formatter --tags=@productSearch"
   },
+
+
   "keywords": [],
   "author": "",
   "license": "ISC",
