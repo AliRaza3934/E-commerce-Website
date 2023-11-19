@@ -17,7 +17,6 @@ public async itemCategory():Promise<void>{
     await pageFixture.page.waitForTimeout(4000);
     await this.productDetailLocators.CategoryField().click();
     
-    
     await this.productDetailLocators.accessoriesField().click();
     const description = this.productDetailLocators.asserttitle();
     console.log("Product Desc: " + await description.textContent());

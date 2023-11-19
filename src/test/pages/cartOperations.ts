@@ -13,7 +13,6 @@ export class CartItem{
         await pageFixture.page.goto('https://techshopbd.com/browse/category?id=30');
 
     }
-
     public async selectProduct():Promise<void>{
         await this.cartitemLocators.accessoriesField().click();
         await pageFixture.page.waitForSelector('#js--btn-plus');

@@ -4,7 +4,7 @@
   "description": "QA Testing",
   "main": "index.js",
   "scripts": {
-    "techshop": "cucumber-js test --format cucumber-console-formatter --tags=@productDetail"
+    "techshop": "cucumber-js test --format cucumber-console-formatter --tags=@Regression"
   },
   "keywords": [],
   "author": "",
