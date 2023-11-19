@@ -6,6 +6,6 @@ setDefaultTimeout(15000);
 
 Then('User is able to click on dropdown toggle',async function () {
     let userProfile = new UserProfile(pageFixture.page)
-    await userProfile.navigateToEditProfile();
+    userProfile.navigateToEditProfile();
 
 })

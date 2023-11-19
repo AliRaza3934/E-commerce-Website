@@ -1,4 +1,4 @@
-@Product
+@Product 
 Feature: User is able to search and filter products.
 
  Background: User visits website
