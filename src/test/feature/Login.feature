@@ -1,5 +1,5 @@
 @Login @Regression
-Feature: User Login.
+Feature: User Login Page.
 
  Background: User visits website
   Given User visits the website

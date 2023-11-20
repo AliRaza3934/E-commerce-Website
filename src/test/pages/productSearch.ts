@@ -14,7 +14,7 @@ export class PD{
 
 
 public async searchProduct(productName):Promise<void>{
-
+    await pageFixture.page.waitForTimeout(8000);
     await this.landingPageLocators.searchField().type(productName);
     await pageFixture.page.keyboard.press('Enter');
 }
@@ -23,6 +23,7 @@ public async assertProduct(searchResult):Promise<void>{
     //console.log(...await this.landingPageLocators.resultProducts().allTextContents());
 }
 public async Filtersearch():Promise<void>{
+    await pageFixture.page.waitForTimeout(4000);
     await this.landingPageLocators.CategoryField().click();
     await this.landingPageLocators.filterfield().click();
     await this.landingPageLocators.assertPicehigh();

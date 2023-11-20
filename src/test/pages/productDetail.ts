@@ -3,7 +3,7 @@ import { pageFixture } from "../hooks/pageFixture"
 
 export class ProductDetail{
   productDetailLocators = {
-    CategoryField:()=> pageFixture.page.locator("//a[normalize-space()='Accessories']"),
+    categoryField:()=> pageFixture.page.locator("//a[normalize-space()='Accessories']"),
     selectdropdownField:()=> pageFixture.page.locator('//div[@class="dropdown-menu"]//a[normalize-space()="Connector"]'),
     accessoriesField:()=> pageFixture.page.locator("//p[normalize-space()='USB Cable A to B']"),
     asserttitle:()=> pageFixture.page.locator("//h1[normalize-space()='USB Cable A to B']"),
@@ -15,7 +15,7 @@ export class ProductDetail{
 public async itemCategory():Promise<void>{
     
     await pageFixture.page.waitForTimeout(4000);
-    await this.productDetailLocators.CategoryField().click();
+    await this.productDetailLocators.categoryField().click();
     
     await this.productDetailLocators.accessoriesField().click();
     const description = this.productDetailLocators.asserttitle();

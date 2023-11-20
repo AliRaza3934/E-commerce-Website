@@ -3,7 +3,7 @@ import { pageFixture } from "../hooks/pageFixture"
 
 export class CartItem{
     cartitemLocators = {
-        CategoryField:()=> pageFixture.page.locator("//a[normalize-space()='Accessories']"),
+        categoryDropdown:()=> pageFixture.page.locator("//a[normalize-space()='Accessories']"),
         accessoriesField:()=> pageFixture.page.locator("//p[normalize-space()='DC Socket']"),
         addItem:()=> pageFixture.page.locator('#js--btn-plus'),
         cartBtn:()=> pageFixture.page.locator("//a[@class='btn btn-cart']"),
@@ -14,9 +14,8 @@ export class CartItem{
     }
    
     public async selectProduct():Promise<void>{
-       
-        await pageFixture.page.waitForTimeout(4000);
-        await this.cartitemLocators.CategoryField().click();
+        await pageFixture.page.waitForTimeout(5000);
+        await this.cartitemLocators.categoryDropdown().click();
         await this.cartitemLocators.accessoriesField().click();
         await pageFixture.page.waitForSelector('#js--btn-plus');
         await pageFixture.page.waitForTimeout(5000);

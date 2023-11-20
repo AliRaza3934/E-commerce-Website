@@ -4,7 +4,7 @@ import { LoginPage } from "../pages/loginPage"
 
 setDefaultTimeout(15000);
 
-Given('User visits the website', async function (){
+Given('User visits the website', async function(){
     let loginPage = new LoginPage(pageFixture.page);
     await loginPage.goToUrl();
 });
@@ -19,7 +19,7 @@ Then('User is logged in with {string}', async function (wrongUsername: string){
     await loginPage.userIsLoggedIn(wrongUsername);
 });
 
-Then('User is not logged in', async function (){
+Then('User is not logged in', async function(){
     let loginPage = new LoginPage(pageFixture.page);
     await loginPage.userNotLoggedIn();
 });
