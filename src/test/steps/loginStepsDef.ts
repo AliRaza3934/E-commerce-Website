@@ -2,7 +2,7 @@ import {Given, When, Then, setDefaultTimeout} from "@cucumber/cucumber"
 import { pageFixture } from "../hooks/pageFixture"
 import { LoginPage } from "../pages/loginPage"
 
-setDefaultTimeout(15000);
+setDefaultTimeout(30000);
 
 Given('User visits the website', async function(){
     let loginPage = new LoginPage(pageFixture.page);

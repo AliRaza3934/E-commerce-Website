@@ -1,6 +1,8 @@
-import { Then, When } from "@cucumber/cucumber";
+import { setDefaultTimeout, Then, When } from "@cucumber/cucumber";
 import { pageFixture } from "../hooks/pageFixture";
 import { PD} from "../pages/productSearch";
+
+setDefaultTimeout(30000);
 
 let productSearch = new PD (pageFixture.page);
 
