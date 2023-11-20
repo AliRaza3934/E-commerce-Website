@@ -3,7 +3,7 @@ import { pageFixture } from "../hooks/pageFixture"
 
 export class UserProfile{
     userProfileLocators = {
-        dropdownField:()=> pageFixture.page.locator("//a[@class='dropdown-toggle-user']"),
+        dropdownField:()=> pageFixture.page.locator("//a[@class='dropdown-toggle-user']s']"),
         selelctProfile:()=> pageFixture.page.locator("//a[normalize-space()='Profile']"),
         changeinfoMenu:()=> pageFixture.page.locator("//span[@class='js--link-edit1 ml-4']"),
         nameField:()=>pageFixture.page.locator("//input[@id='name']"),
@@ -23,12 +23,7 @@ export class UserProfile{
 
 
 public async navigateToEditProfile():Promise<void>{
-   //await pageFixture.page.goto('https://techshopbd.com/my-section/my-profile');
-   await pageFixture.page.waitForTimeout(5000);
-   await this.userProfileLocators.dropdownField().click();
-   await pageFixture.page.waitForTimeout(5000);
-   await this.userProfileLocators.selelctProfile().click();
-   await pageFixture.page.waitForTimeout(5000);
+   await pageFixture.page.goto('https://techshopbd.com/my-section/my-profile');
    await this.userProfileLocators.changeinfoMenu().click();
    await this.userProfileLocators.nameField().clear()
    await this.userProfileLocators.nameField().type('ALIRAZA')

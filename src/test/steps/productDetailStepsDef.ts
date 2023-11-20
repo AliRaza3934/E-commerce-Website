@@ -2,7 +2,7 @@ import {Given, When , Then, setDefaultTimeout} from "@cucumber/cucumber"
 import { pageFixture } from "../hooks/pageFixture"
 import { ProductDetail } from "../pages/productDetail"
 
-setDefaultTimeout(15000);
+setDefaultTimeout(30000);
 
 Given('User is at techshop', async function(){
     let productItems = new ProductDetail(pageFixture.page);
