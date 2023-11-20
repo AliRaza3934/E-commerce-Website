@@ -12,7 +12,7 @@ Then('{string} is returned', async function(productName){
      await productSearch.assertProduct(productName);
 });
 
-Then('User is able to select a categorys', async function () {
+Then('User is able to select a categorys', async function(){
     await productSearch.Filtersearch();
 })
 

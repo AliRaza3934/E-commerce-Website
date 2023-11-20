@@ -54,7 +54,6 @@ public async navigateToEditProfile():Promise<void>{
    console.log("Title: " + await orderTitle.textContent());
 
 }
-
 constructor(public page: Page){
     pageFixture.page = page;
 }

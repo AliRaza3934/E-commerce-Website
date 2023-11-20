@@ -12,11 +12,13 @@ export class LoginPage {
         usernameNavBar:() => pageFixture.page.locator("//a[@class='dropdown-toggle-user']//span[contains(., 'arqureshi.3934@gmail.com')]")
     }
     public async goToUrl():Promise<void>{
+        await pageFixture.page.waitForTimeout(4000);
         await pageFixture.page.goto('https://techshopbd.com/');
     }
     public async userSuccessfulLogin(username: string, password: string):Promise<void>{
         await this.loginPageLocators.loginWindow().click();
         await this.loginPageLocators.userField().type(username);
+        await pageFixture.page.waitForTimeout(4000);
         await this.loginPageLocators.passwordField().type(password);
         await this.loginPageLocators.loginBtn().click();
     }
