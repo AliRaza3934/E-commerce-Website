@@ -7,7 +7,6 @@ setDefaultTimeout(30000);
 let productItem = new CartItem(pageFixture.page);
 
 When('User is able to select select view and delete item',async function () {
-    
-    productItem.selectProduct();
+     productItem.selectProduct();
 })
 

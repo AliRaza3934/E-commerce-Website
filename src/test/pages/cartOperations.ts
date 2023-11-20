@@ -12,7 +12,7 @@ export class CartItem{
         deletItem:()=> pageFixture.page.locator("//a[@name='remove-cart-product']"),
         
     }
-
+   
     public async selectProduct():Promise<void>{
        
         await pageFixture.page.waitForTimeout(4000);
@@ -28,8 +28,6 @@ export class CartItem{
         await pageFixture.page.waitForTimeout(5000);
         const comment = this.cartitemLocators.assertAmount();
         console.log("Amount: " + await comment.textContent());
-        
-        
         await this.cartitemLocators.deletItem().click();
     }
     
