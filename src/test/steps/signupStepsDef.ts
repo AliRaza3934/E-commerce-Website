@@ -1,6 +1,6 @@
 import { Given , When, Then , setDefaultTimeout} from "@cucumber/cucumber"
 import { pageFixture } from "../hooks/pageFixture"
-import { SignupPage } from "../pages/signUpPage"
+import { SignupPage } from "../pages/signupPage"
 
 setDefaultTimeout(15000);
 
