@@ -7,13 +7,14 @@ export class PD{
         searchField:() => pageFixture.page.locator("//input[@placeholder='Search by product name']"),
         resultProducts:() => pageFixture.page.locator("//div[@class='product-info']//p[1]").first(),
         CategoryField:()=> pageFixture.page.locator("//a[normalize-space()='Accessories']"),
-        filterfield:() => pageFixture.page.locator("#browse-filter"),
-        assertProduct:()=> pageFixture.page.locator("//p[normalize-space()='Zif socket (40 pin)']"),
-        Lowtohighfield:() => pageFixture.page.locator("option[value='PRICE_ASC']"),
+        filterfield:() => pageFixture.page.locator("//select[@id='browse-filter']"),
+        assertPicehigh:()=> pageFixture.page.locator("//p[normalize-space()='TK. 124.59']"),
+        assertPricelow:()=> pageFixture.page.locator("//p[normalize-space()='TK. 85.73']"),
     }
 
 
 public async searchProduct(productName):Promise<void>{
+
     await this.landingPageLocators.searchField().type(productName);
     await pageFixture.page.keyboard.press('Enter');
 }
@@ -24,12 +25,16 @@ public async assertProduct(searchResult):Promise<void>{
 public async Filtersearch():Promise<void>{
     await this.landingPageLocators.CategoryField().click();
     await this.landingPageLocators.filterfield().click();
-    await this.landingPageLocators.assertProduct();
-    const Titel = this.landingPageLocators.assertProduct();
-    console.log("Comment: " + await Titel.textContent());
-   // await this.landingPageLocators.Lowtohighfield().click();
-   
-    }
+    await this.landingPageLocators.assertPicehigh();
+    const high = this.landingPageLocators.assertPicehigh();
+    console.log("Price High: " + await high.textContent());
+    await pageFixture.page.waitForTimeout(8000);
+    await this.landingPageLocators.assertPricelow();
+    const low = this.landingPageLocators.assertPricelow();
+    console.log("Price Low: " + await low.textContent());
+    
+   // await this.landingPageLocators.Lowtohighfield().click()} }
+}
 
 constructor(public page: Page){
     pageFixture.page = page;

@@ -1,7 +1,7 @@
 @userProfile @Regression
 Feature: User Profile.
 
- Background: User visits website
+Background: User visits website
   Given User visits the website
   When User enters "arqureshi.3934@gmail.com" and "Automation"
   
