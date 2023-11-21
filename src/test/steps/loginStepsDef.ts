@@ -1,6 +1,6 @@
-import {Given, When, Then, setDefaultTimeout} from "@cucumber/cucumber"
-import { pageFixture } from "../hooks/pageFixture"
-import { LoginPage } from "../pages/loginPage"
+import {Given, When, Then, setDefaultTimeout} from "@cucumber/cucumber";
+import { pageFixture } from "../hooks/pageFixture";
+import { LoginPage } from "../pages/loginPage";
 
 setDefaultTimeout(30000);
 

@@ -1,5 +1,5 @@
-import{expect,Page}from "@playwright/test"
-import { pageFixture } from "../hooks/pageFixture"
+import{expect,Page}from "@playwright/test";
+import { pageFixture } from "../hooks/pageFixture";
 
 export class CartItem{
     cartitemLocators = {
@@ -10,9 +10,8 @@ export class CartItem{
         gotoCart:()=> pageFixture.page.locator("//a[normalize-space()='Go to Cart']"),
         assertAmount:()=>pageFixture.page.locator("//p[@id='payable_total']"),
         deletItem:()=> pageFixture.page.locator("//a[@name='remove-cart-product']"),
-        
     }
-   
+
     public async selectProduct():Promise<void>{
         await pageFixture.page.waitForTimeout(5000);
         await this.cartitemLocators.categoryDropdown().click();
@@ -29,8 +28,8 @@ export class CartItem{
         console.log("Amount: " + await comment.textContent());
         await this.cartitemLocators.deletItem().click();
     }
-    
+
     constructor(public page: Page){
         pageFixture.page = page;
+        }
     }
-}

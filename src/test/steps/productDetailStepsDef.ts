@@ -1,6 +1,6 @@
-import {Given, When , Then, setDefaultTimeout} from "@cucumber/cucumber"
-import { pageFixture } from "../hooks/pageFixture"
-import { ProductDetail } from "../pages/productDetail"
+import {Given, When , Then, setDefaultTimeout} from "@cucumber/cucumber";
+import { pageFixture } from "../hooks/pageFixture";
+import { ProductDetail } from "..//pages/productDetail";
 
 setDefaultTimeout(30000);
 
@@ -14,7 +14,3 @@ When('User navigates to a category', async function(){
     let product = new ProductDetail(pageFixture.page);
     await product.itemCategory();
 });
-
-Then('Category is selected', async function(){
-    console.log('Passed.')
-})

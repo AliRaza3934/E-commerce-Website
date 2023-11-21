@@ -1,6 +1,6 @@
-import{ Given, When, Then, setDefaultTimeout} from "@cucumber/cucumber"
-import {pageFixture} from "../hooks/pageFixture"
-import { CartItem } from "../pages/cartOperations"
+import{ Given, When, Then, setDefaultTimeout} from "@cucumber/cucumber";
+import {pageFixture} from "../hooks/pageFixture";
+import { CartItem } from "../pages/cartOperations";
 
 setDefaultTimeout(30000);
 
