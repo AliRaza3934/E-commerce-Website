@@ -1,4 +1,5 @@
 import { LaunchOptions } from '@playwright/test';
+import { on } from 'events';
 
 export const config:LaunchOptions = {
 
